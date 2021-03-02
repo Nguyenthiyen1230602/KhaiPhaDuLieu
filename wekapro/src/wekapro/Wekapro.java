@@ -19,8 +19,8 @@ public class Wekapro {
         MyKnowledgeModel model = new MyKnowledgeModel
         ("C:\\Program Files\\Weka-3-8-5\\data\\iris.arff");
         System.out.println(model);
-        model.saveData("D:\\Data\\iris.arff");
-        model.saveData2CSV("D:\\Data\\iris_CSV.csv");
+//        model.saveData("D:\\Data\\iris.arff");
+        model.saveData2CSV("E:\\\\iris_CSV.csv");
     }
     
 }

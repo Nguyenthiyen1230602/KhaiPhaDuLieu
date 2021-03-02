@@ -17,38 +17,37 @@ import weka.core.converters.ConverterUtils.DataSource;
  * @author ADMIN
  */
 public class MyKnowledgeModel {
+
     DataSource source;
     Instances dataset;
-    
-    public MyKnowledgeModel () {
+
+    public MyKnowledgeModel() {
     }
-    
-    public MyKnowledgeModel (String filename) throws Exception {
-        this.source =new DataSource(filename);
+
+    public MyKnowledgeModel(String filename) throws Exception {
+        this.source = new DataSource(filename);
         this.dataset = source.getDataSet();
     }
-    
-    public void saveData(String filename) throws IOException{
+
+    public void saveData(String filename) throws IOException {
         ArffSaver outData = new ArffSaver();
         outData.setInstances(this.dataset);
         outData.setFile(new File(filename));
         outData.writeBatch();
         System.out.println("Finished");
     }
-    
-    public void saveData2CSV(String filename) throws IOException{
-            CSVSaver outData = new CSVSaver();
-            outData.setFile(new File(filename));
-            outData.writeBatch();
-            System.out.println("Converted");
+
+    public void saveData2CSV(String filename) throws IOException {
+        CSVSaver outData = new CSVSaver();
+        outData.setFile(new File(filename));
+        outData.setInstances(this.dataset);
+        outData.writeBatch();
+        System.out.println("Converted");
     }
-    
 
     @Override
     public String toString() {
         return dataset.toSummaryString(); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-    
+
 }
