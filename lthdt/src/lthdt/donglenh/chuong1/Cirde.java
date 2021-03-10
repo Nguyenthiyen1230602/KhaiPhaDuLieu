@@ -9,7 +9,7 @@ package lthdt.donglenh.chuong1;
  *
  * @author ADMIN
  */
-public class Cirde {
+public class Cirde extends Shape  {
     private int radius;
     private int x,y ;
 
@@ -22,16 +22,28 @@ public class Cirde {
         this.y = y;
     }
     
+    @Override
     public double  calcPerimeter(){
         double result = 2*Math.PI*this.radius;
-        return result;
-        
+        return result;    
     }
     
+    @Override
     public double calcArea(){
-    double result = Math.PI*this.radius*this.radius;
-    return result;
+        double result = Math.PI*this.radius*this.radius;
+        return result;
     }
+
+    @Override
+    public String toString() {
+       String output = " chu vi hinh tron la: " + calcPerimeter()+
+               "; dien tich la " + calcArea();
+       return output;
+    }
+    
+    
+    
+    
 
     public int getRadius() {
         return radius;
@@ -56,5 +68,10 @@ public class Cirde {
     public void setY(int y) {
         this.y = y;
     }
-    
+
+//    @Override
+//    public double calcea() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+//    
 }

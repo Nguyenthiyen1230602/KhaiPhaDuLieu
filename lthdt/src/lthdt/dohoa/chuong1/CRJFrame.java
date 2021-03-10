@@ -60,7 +60,7 @@ public class CRJFrame extends javax.swing.JFrame {
 
         jLabel4.setText("lower = y");
 
-        btntinh.setText("Tinh chu vi và dien tich hinh chu nhat");
+        btntinh.setText("Tinh chu vi & dien tich hinh chu nhat");
         btntinh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btntinhActionPerformed(evt);
@@ -140,9 +140,10 @@ public class CRJFrame extends javax.swing.JFrame {
                 Integer.parseInt(txtuppery.getText()),
                 Integer.parseInt(txtlowerx.getText()),
                 Integer.parseInt(txtlowery.getText()));
-        String result = "Dien tich hinh chu nhat" +hcn.calcArea();
-        result += " ;chu vi " +hcn.calcPerimeter();
-        jTextArea1.append(result);
+        
+//        String result = "Dien tich hinh chu nhat" +hcn.calcArea();
+//        result += " ;chu vi " +hcn.calcPerimeter();
+        jTextArea1.append(hcn.toString());
     }//GEN-LAST:event_btntinhActionPerformed
 
     /**
