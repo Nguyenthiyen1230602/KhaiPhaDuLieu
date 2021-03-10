@@ -34,6 +34,7 @@ public class Bai06 {
                 sinhvien.getGioitinh() + "; ngaysinh: " +
                 df.format(sinhvien.getNgaysinh()) + "; " +
                 sinhvien.getTruonghoc());
+        System.out.println(sinhvien.calcTax(1200));
         
         Worker congnhan = new Worker();
         congnhan.setHoten("Nguyen Thi C");
@@ -44,7 +45,7 @@ public class Bai06 {
                 congnhan.getGioitinh() + "; ngaysinh:" +
                 df.format(congnhan.getNgaysinh()) + "; congty: " +
                 congnhan.getCongty());
-        
+        System.out.println(congnhan.calcTax(2000));
         
     }
 
